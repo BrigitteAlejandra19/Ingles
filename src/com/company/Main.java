@@ -35,7 +35,7 @@ public class Main {
 
             //System.out.println("La validacion fue: "+ word.isThisEnglishWordValid(englishWord));
         }
-        System.out.println("your english average is: " + englishTest.average());
+        System.out.println("Your english average is: " + englishTest.average());
 
         // English to Spanish
         for (int i=0; i < words.size(); i++){
