@@ -4,7 +4,7 @@ public class Word {
 
     private String inEnglish;
     private String inSpanish;
-    private String sentence;
+    private String sentence = "";
 
     public Word(String inEnglish, String inSpanish) {
         this.inEnglish = inEnglish;
@@ -19,10 +19,23 @@ public class Word {
         return inSpanish;
     }
 
-    public boolean isThisEnglishWordValid(String englishWord){
-       return inEnglish!=null && inEnglish.equalsIgnoreCase(englishWord);
+    public String getSentence() {
+        return sentence;
     }
-    public boolean isThisSpanishWordValid(String spanihshWord){
-        return inSpanish!=null && inSpanish.equalsIgnoreCase(spanihshWord);
+
+    public void setSentence(final String sentence) {
+        this.sentence = sentence;
+    }
+
+    public boolean isThisEnglishWordValid(String sentence) {
+        return inEnglish != null && sentence != null && sentence.contains(inEnglish);
+    }
+
+    public boolean isThisSpanishWordValid(String spanihshWord) {
+        return inSpanish != null && inSpanish.equalsIgnoreCase(spanihshWord);
+    }
+
+    public boolean isOkES() {
+        return sentence.contains(inEnglish);
     }
 }
